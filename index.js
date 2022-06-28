@@ -31,10 +31,11 @@ function myFunction() {
 */
 
 function summation(num) {
-  let count = 0;
-  return function update(){
-    count++;
+  let a=0
+   for ( let i = 0; i <= num; i++) {
+     a+=i
   }
+  return a
 }
  
 
@@ -63,11 +64,17 @@ const zooAnimals = [
   */
 
   function animalNames(arr){
-   forEach((element) => {
-  console.log({ element });
+    const animalN=[]
+    arr.forEach(item=>{
+    animalN.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
   
-});
+    })
+    return animalN
+  
   }
+    
+  animalNames(zooAnimals)
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
